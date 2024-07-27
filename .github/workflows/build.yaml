@@ -1,0 +1,48 @@
+# cspell:ignore lwbt GITHUB ncipollo
+name: Create CV
+on:
+  workflow_dispatch:
+env:
+  SOFTWARE_NAME: "asciidoc-public"
+  FILE_NAME: "*.pdf"
+  GIT_AUTHOR_NAME: "lwbt"
+  GIT_AUTHOR_EMAIL: "lwbt_pipeline@github.com"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+      - name: Install Gems
+        run: gem install asciidoctor-pdf text-hyphen
+      - name: Render updated document
+        run: ./run.sh
+      - name: Set timestamp environment variable
+        run: |
+          echo "TIMESTAMP=$(date +"%F %T")" >> $GITHUB_ENV
+          echo "TAG=$(date +"%F_%H%M%S")" >> $GITHUB_ENV
+      - name: Create tag in ${{ env.SOFTWARE_NAME }} repository
+        run: |
+          if git rev-parse --quiet --verify "refs/tags/${{ env.TAG }}"; then
+            echo "Tag already exists"
+            exit 0
+          else
+            echo "Tag does not exist, creating"
+            git tag "${{ env.TAG }}"
+            git push --tags
+          fi
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          name: ${{ env.SOFTWARE_NAME }} ${{ env.TIMESTAMP }}
+          tag: ${{ env.TAG }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          draft: false
+          prerelease: false
+          artifacts: |
+            ${{ env.FILE_NAME }}
+          body: Updated CV

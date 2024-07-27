@@ -1,0 +1,40 @@
+= asciidoc-public
+:hide-uri-scheme:
+// Enable keyboard macros
+:experimental:
+:toc:
+:toclevels: 4
+:icons: font
+:note-caption: ℹ️
+:tip-caption: 💡
+:warning-caption: ⚠️
+:caution-caption: 🔥
+:important-caption: ❗
+
+// cspell:ignore
+
+== Overview
+
+TBD
+
+== Usage
+
+=== Creating PDF files
+
+For local development just edit the files as you see fit and run:
+
+[source,bash]
+----
+./run.sh
+----
+
+=== Setup
+
+[source,bash]
+----
+sudo apt-get install -y asciidoctor
+
+# Install a recent version of asciidoctor-pdf
+gem install asciidoctor-pdf
+gem install text-hyphen
+----

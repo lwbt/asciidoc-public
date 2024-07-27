@@ -1,0 +1,64 @@
+= Be Aware of Potential Scams
+:hyphens: en
+:revdate: {docdate}
+:imagesdir: ./assets/images
+// :notitle:
+:noheader:
+:nofooter:
+:includedir: includes
+// :icons: font
+// :docinfo: shared
+
+[.regular]
+Dear new tenant,
+
+Welcome! From time to time, you might have unexpected visitors at your door.
+Here are a few tips to keep in mind:
+
+* *Don't sign anything at the door.*
+* *Don't let strangers into your home.*
+* *Be cautious and don't share more information than necessary.* +
+  Even saying _"Yes, my name is ..."_ can be too much for someone who hasn't +
+  contacted you formally.
+
+== Common Scams and Dubious Practices
+
+* *Telekom:*
+  They may claim they can improve your Internet. See the details below.
+* *Jehovah's Witnesses / Zeugen Jehovas*
+* *Bofrost / Eismann / ... :*
+  These are frozen food delivery services that existed long before today's startups.
+  If you're interested, check out their websites instead of engaging at the door.
+
+== Improving Your Internet Performance
+
+* *WiFi/WLAN Issues:*
+  Many problems can be related to your WiFi setup.
+  See the tips below.
+* *Contact Your Provider:*
+  If you have issues, contact your current Internet service provider first.
+  If they can’t resolve the problem, consider switching to a different one.
+* *Understanding Telekom:*
+  While Telekom built much of Germany's network infrastructure, they must allow competitors to use it.
+  Good Internet isn't just about high speeds or fiber optics.
+  One issue with Telekom is their refusal to peer at DE-CIX, which can affect your service.
+
+== Enhancing Your WiFi Performance
+
+* *Channel Width:*
+  Set to 20 MHz for 2.4 GHz and 40 or 80 MHz for 5 GHz radios.
+* *Channel Selection:*
+  For 2.4 GHz, choose from channels 1, 6, and 11.
+* *Device Use:*
+  Prefer 5 GHz for devices that support it, or even better, use a cable connection.
+
+[.small]
+Source: https://help.ui.com/hc/en-us/articles/221029967
+
+== Handling Persistent Talkers
+
+Don't feel guilty or pressured to make a quick decision.
+Always take the time you need to think things over.
+You can end any conversation with a genuine businessperson at any time.
+
+Stay safe and enjoy your new home!

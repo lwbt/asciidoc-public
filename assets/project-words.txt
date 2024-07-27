@@ -1,0 +1,29 @@
+# AsciiDoc
+adoc
+toclevels
+includedir
+asciidoctor
+jobtitle
+revdate
+docdate
+imagesdir
+notitle
+docinfo
+shortdisc
+docdatetime
+hardbreaks
+ifeval
+sectnumlevels
+sectnums
+autowidth
+nofooter
+iconsdir
+noheader
+
+# ./assets/themes/my-theme-ao.yml
+notoserif
+pdfwidth
+
+# Names
+Noto
+Bofrost
